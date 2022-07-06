@@ -1,82 +1,73 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #efefef;
 }
 
-section {
-  box-shadow: 2px 5px 17px -2px dimgray;
-  width: 70vw;
-  font-family: Poppins, sans-serif;
-  font-size: 18px;
-  background-color: #fff;
-  margin-left: 15%;
-  margin-top: 5%;
-}
-
-.todo {
-  margin: 10px 15px;
-  padding: 30px 10px;
-  border-bottom: 1px solid gray;
-}
-
-i {
-  float: right;
-}
-
-.header {
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f2f5;
   display: flex;
-  justify-content: space-between;
-  margin: auto 12px;
-  font-weight: 550;
+  justify-content: center;
+  align-items: center;
+  color: #545862;
 }
 
-.header .fa-sync {
-  margin-top: 23px;
-}
-
-.header h1 {
-  font-weight: 600;
-}
-
-form {
+#todo-list {
   display: flex;
   flex-direction: column;
+  width: 40%;
+  background-color: rgb(247, 247, 248);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  margin-top: 5rem;
 }
 
-form input {
-  border: transparent;
-  border-bottom: 1px solid grey;
-  margin: auto 9px;
-  font-style: italic;
-  padding: 9px;
-}
-
-form button {
+#todo-list a {
+  background: transparent;
   border: none;
-  padding: 12px;
+  padding: 1rem 1.3rem;
+  text-align: center;
+  text-decoration: none;
   color: gray;
 }
 
-form button:hover {
-  color: grey;
-  text-decoration: underline;
-  cursor: pointer;
+li {
+  list-style: none;
 }
 
-.fa-trash-alt {
-  display: none;
+.icon {
+  fill: rgba(152, 152, 152, 1);
 }
 
-.trash-active {
-  display: block;
+#header,
+#add-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.edited-disable {
-  display: none;
+#add-task input {
+  background-color: rgb(247, 247, 248);
+  width: 90%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-style: italic;
 }
 
-.checkedContainer {
-  background-color: rgb(250, 235, 220);
+#task-list {
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1.3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.task-d {
+  width: 90%;
 }
