@@ -15,7 +15,7 @@ section {
   margin-top: 5%;
 }
 
-.todo{
+.todo {
   margin: 10px 15px;
   padding: 30px 10px;
   border-bottom: 1px solid gray;
@@ -80,4 +80,3 @@ form button:hover {
 .checkedContainer {
   background-color: rgb(250, 235, 220);
 }
-
