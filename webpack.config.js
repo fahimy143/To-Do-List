@@ -2,24 +2,22 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+
   entry: './src/index.js',
-  mode: 'production',
-  devServer: {
-    static: './dist',
-  },
+
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
+
   output: {
-    filename: 'main.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+
   module: {
     rules: [
       {

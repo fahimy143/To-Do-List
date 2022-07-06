@@ -15,9 +15,9 @@ class Objects {
 const Array = [];
 
 const add = (Value) => {
-  const Container = document.createElement('div');
-  Container.className = 'todo';
-  Container.innerHTML = `
+  const todo = document.createElement('div');
+  todo.className = 'todo';
+  todo.innerHTML += `
     <input type='checkbox' class='checkbox'>
     <span>${Value}</span>
     <i class='fas fa-ellipsis-v'></i>
@@ -25,25 +25,18 @@ const add = (Value) => {
   `;
   Container.appendChild(todo);
   const checkbox = document.querySelectorAll('.checkbox');
-  checkbox.forEach((x) => {
-    x.addEventListener('click', () => {
-      x.parentElement.classList.toggle('checkedContainer');
-      x.nextElementSibling.classList.toggle('checkToDo');
-      x.parentElement.lastElementChild.classList.toggle('trash-active');
-      x.parentElement.lastElementChild.previousElementSibling.classList.toggle('edited-disable');
+  checkbox.forEach((i) => {
+    i.addEventListener('click', () => {
+      i.parentElement.classList.toggle('checkedContainer');
+      i.nextElementSibling.classList.toggle('checkToDo');
+      i.parentElement.lastElementChild.classList.toggle('trash-active');
+      i.parentElement.lastElementChild.previousElementSibling.classList.toggle('edited-disable');
     });
   });
 
   const object = new Objects(Value, false, checkbox.length - 1);
   Array.push(object);
   localStorage.setItem('list', JSON.stringify(Array));
-
-  const EditIcons = document.querySelectorAll('.fa-ellipsis-v');
-  EditIcons.forEach((x) => {
-    x.addEventListener('click', () => {
-
-    });
-  });
 };
 
 inputText.addEventListener('keypress', (e) => {

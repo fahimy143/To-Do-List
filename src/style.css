@@ -1,3 +1,83 @@
-.hello {
-    color: red;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #efefef;
+}
+
+section {
+  box-shadow: 2px 5px 17px -2px dimgray;
+  width: 70vw;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  background-color: #fff;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.todo{
+  margin: 10px 15px;
+  padding: 30px 10px;
+  border-bottom: 1px solid gray;
+}
+
+i {
+  float: right;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 12px;
+  font-weight: 550;
+}
+
+.header .fa-sync {
+  margin-top: 23px;
+}
+
+.header h1 {
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: transparent;
+  border-bottom: 1px solid grey;
+  margin: auto 9px;
+  font-style: italic;
+  padding: 9px;
+}
+
+form button {
+  border: none;
+  padding: 12px;
+  color: gray;
+}
+
+form button:hover {
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fa-trash-alt {
+  display: none;
+}
+
+.trash-active {
+  display: block;
+}
+
+.edited-disable {
+  display: none;
+}
+
+.checkedContainer {
+  background-color: rgb(250, 235, 220);
+}
+
