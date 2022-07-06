@@ -29,7 +29,9 @@ To get a local copy up and running follow these simple example steps.
   - webpack
 
 ### Setup
-  - Clone the github repository and set up linters and webpack
+  - Clone the github repository 
+  - set up HTML, CSS, JavaScript linters 
+  - set up webpack
 
 
 ## Author

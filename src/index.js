@@ -11,7 +11,17 @@ class Objects {
   }
 }
 
-const Array = [];
+const Array = [{
+  index: 1,
+  description: 'wash the deshes',
+  completed: false,
+},
+{
+  index: 2,
+  description: 'complete to do list project',
+  completed: false,
+}
+];
 
 const add = (Value) => {
   const todo = document.createElement('div');
