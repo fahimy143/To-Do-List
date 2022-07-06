@@ -2,7 +2,7 @@ import './style.css';
 
 const tasks = [
   {
-    description: 'dowing homwork',
+    description: 'reading',
     completed: false,
     index: 0,
   },
