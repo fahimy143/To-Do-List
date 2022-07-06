@@ -20,7 +20,7 @@ const Array = [{
   index: 2,
   description: 'complete to do list project',
   completed: false,
-}
+},
 ];
 
 const add = (Value) => {
