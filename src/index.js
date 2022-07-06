@@ -1,7 +1,10 @@
+import { editTodo, removeTodo } from './functionality';
+import { getFromLocal, updateLocalStorage } from './Todo';
 import './style.css';
 
 const inputText = document.querySelector('input');
 const Container = document.querySelector('.container');
+const ClearBtn = document.querySelector('button');
 
 class Objects {
   constructor(description, completed, index) {
@@ -11,17 +14,7 @@ class Objects {
   }
 }
 
-const Array = [{
-  index: 1,
-  description: 'wash the deshes',
-  completed: false,
-},
-{
-  index: 2,
-  description: 'complete to do list project',
-  completed: false,
-},
-];
+export const Array = [];
 
 const add = (Value) => {
   const todo = document.createElement('div');
@@ -40,12 +33,28 @@ const add = (Value) => {
       i.nextElementSibling.classList.toggle('checkToDo');
       i.parentElement.lastElementChild.classList.toggle('trash-active');
       i.parentElement.lastElementChild.previousElementSibling.classList.toggle('edited-disable');
+      updateLocalStorage();
     });
   });
 
   const object = new Objects(Value, false, checkbox.length - 1);
   Array.push(object);
   localStorage.setItem('list', JSON.stringify(Array));
+
+  const EditIcons = document.querySelectorAll('.fa-ellipsis-v');
+  EditIcons.forEach((i) => {
+    i.addEventListener('click', () => {
+      editTodo(todo, i.previousElementSibling);
+      i.parentElement.classList.add('checkedContainer');
+    });
+  });
+
+  const removeIcons = document.querySelectorAll('.fa-trash-alt');
+  removeIcons.forEach((i) => {
+    i.addEventListener('click', () => {
+      removeTodo(i.parentElement);
+    });
+  });
 };
 
 inputText.addEventListener('keypress', (e) => {
@@ -55,3 +64,19 @@ inputText.addEventListener('keypress', (e) => {
     inputText.value = null;
   }
 });
+
+
+const ClearAll = () => {
+  const localData = JSON.parse(localStorage.getItem('list'));
+  const todo = document.querySelectorAll('.todo');
+  todo.forEach((i) => {
+    if (i.classList.contains('checkedContainer')) {
+      removeTodo(i);
+    }
+  });
+  let count = 0;
+  const data = Array.from(localData).filter(i => i.completed === false);
+  data.map(i => i.index = count++);
+  localStorage.setItem('list', JSON.stringify(data));
+};
+ClearBtn.addEventListener('click', ClearAll);

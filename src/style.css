@@ -80,3 +80,7 @@ form button:hover {
 .checkedContainer {
   background-color: rgb(250, 235, 220);
 }
+
+.checkToDo {
+  text-decoration: line-through;
+}
