@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/1dea6ac3ad.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
-  </head>
-  <body>
-    <section class="list-container">
-      <div class="header">
-        <h1>Today's ToDo</h1>
-        <i class="fas fa-sync"></i>
+</head>
+<body>
+    <section>
+        <p id="header">Today's To Do 
+            <button id="refresh" type="button">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </p>
 
-      </div>
-      <form>
-        <input type="text" placeholder="Add to your list..." >
-        <div class="container">
+        <input type="text" id="new-task" placeholder="Add to your list...">
+        <ul id="todo-list">
 
-        </div>
-        <button type="button">Clear all Tasks completed</button>
-      </form>
-    </section>
-  </body>
+        </ul>
+        <p id="remove-completed">Clear all tasks completed</p>
+      </section>
+</body>
 </html>

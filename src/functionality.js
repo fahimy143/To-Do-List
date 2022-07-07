@@ -1,33 +1,68 @@
-const Container = document.querySelector('.container');
+export default class Tasks {
+  constructor() {
+    this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
+  }
 
-export const editTodo = (todo, todos) => {
-  const editInput = document.createElement('input');
-  editInput.type = 'text';
-  editInput.className = 'editInput';
-  editInput.value = todos.textContent;
-  todo.replaceChild(editInput, todos);
-  editInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      const todoContainers = document.querySelectorAll('.todo');
-      const DataFromLocalStorage = JSON.parse(localStorage.getItem('list'));
-      for (let i = 0; i < todoContainers.length; i++) {
-        if (todoContainers[i].classList.contains('checkedContainer')) {
-          DataFromLocalStorage[i].description = editInput.value;
-          localStorage.setItem('list', JSON.stringify(DataFromLocalStorage));
-        }
-      }
-      editInput.parentElement.classList.remove('checkedContainer');
-      todo.replaceChild(todos, editInput);
-      todos.textContent = editInput.value;
+    displayTask = () => {
+      const todoContainer = document.querySelector('#todo-list');
+      todoContainer.innerHTML = '';
+      this.tasksArray.forEach((task) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<button class="check-task">
+            <i class="fa-regular fa-square"></i> 
+            <input class="todo-item" type="text" value="${task.description}">
+            </button>
+            <button class="delete-task">
+            <i class="fa-solid fa-trash-can"></i>
+            </button>`;
+        todoContainer.insertBefore(li, todoContainer.children[task.index]);
+      });
+
+      const deleteBtn = document.querySelectorAll('.delete-task');
+      deleteBtn.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          this.remove(index);
+        });
+      });
+
+      const editInput = document.querySelectorAll('.todo-item');
+      editInput.forEach((input, index) => {
+        input.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' && input.value) {
+            this.update(input.value, index);
+          }
+        });
+        input.addEventListener('change', () => {
+          if (input.value) {
+            this.update(input.value, index);
+          }
+        });
+      });
     }
-  });
-};
 
-export const removeTodo = (todos) => {
-  Container.removeChild(todos);
-  let count = 0;
-  const DataFromLocalStorage = JSON.parse(localStorage.getItem('list'));
-  const data = Array.from(DataFromLocalStorage).filter(i => i.completed === false);
-  data.map(i => i.index = count++);
-  localStorage.setItem(('list'), JSON.stringify(data));
-};
+    add = (value) => {
+      const newTask = {
+        description: value,
+        isCompleted: false,
+        index: this.tasksArray.length,
+      };
+      this.tasksArray.push(newTask);
+      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+      this.displayTask();
+    }
+
+    update = (value, index) => {
+      this.tasksArray[index].description = value;
+      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+      this.displayTask();
+    }
+
+    remove = (index) => {
+      this.tasksArray.splice(index, 1);
+      for (let i = 0; i < this.tasksArray.length; i += 1) {
+        this.tasksArray[i].index = i;
+      }
+      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+      this.displayTask();
+    }
+}
