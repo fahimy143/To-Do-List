@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="946d4c0e-d3e4-493b-906b-c01476f2f7b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/add-remove.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/add-remove.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +163,7 @@
       <updated>1657743615361</updated>
       <workItem from="1657743618411" duration="822000" />
       <workItem from="1657744581457" duration="19598000" />
+      <workItem from="1657810080052" duration="2915000" />
     </task>
     <servers />
   </component>
