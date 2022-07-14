@@ -136,12 +136,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Wallaby.js.Wallaby" />
       <item itemvalue="Jest.Tasks (1)" />
       <item itemvalue="Jest.Tasks.remove" />
       <item itemvalue="Jest.Add a new task to storage.check new description of array object" />
       <item itemvalue="Jest.Add a new task to storage.check new index of array object" />
       <item itemvalue="Jest.Add a new task to storage.check new length of array object" />
+      <item itemvalue="Wallaby.js.Wallaby" />
     </list>
     <recent_temporary>
       <list>
@@ -162,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657743615361</updated>
       <workItem from="1657743618411" duration="822000" />
-      <workItem from="1657744581457" duration="19168000" />
+      <workItem from="1657744581457" duration="19598000" />
     </task>
     <servers />
   </component>

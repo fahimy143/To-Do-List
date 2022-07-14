@@ -98,6 +98,42 @@ function addTasktoList(task) {
   delTaskbtn.className = 'remove-btn';
 }
 
+// a function for editing the task description.
+function editTask(iD, newDesc) {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (Number(task.taskId) === Number(iD)) {
+      taskArr[index].description = newDesc;
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
+// a function for updating an item's 'completed' status.
+function updateCompleted(iD, newStatus) {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (Number(task.taskId) === Number(iD)) {
+      taskArr[index].completed = newStatus;
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
+// the "Clear all completed" function.
+function clearCompleted() {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (task.completed) {
+      taskArr.splice(index, 1);
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
 dom.window.document.getElementById('form-section').addEventListener('submit', (e) => {
   // Prevent submit
   e.preventDefault();
@@ -134,5 +170,43 @@ describe('Remove Task from Storage', () => {
 
   it('task Arr should be empty', () => {
     expect(taskArray).toStrictEqual([]);
+  });
+
+});
+
+describe('Edit Task', () => {
+  const taskLi = dom.window.document.querySelector('#task-list');
+  const taskDesc = dom.window.document.querySelector('.task-desc');
+  const editBtn = dom.window.document.querySelector('.edit-btn');
+
+  taskDesc.value = 'Task 1';
+  editBtn.click();
+
+  it('task description should be Task 1', () => {
+    expect(taskDesc.value).toBe('Task 1');
+  });
+  
+  it('task description should be Task 1', () => {
+    expect(taskLi.innerHTML).toBe('<li class="task"><h4>1</h4><input class="checkbox" type="checkbox"><input class="task-desc" type="text"><button class="remove-btn">🗑</button></li>');
+  });
+});
+
+describe('Update Completed', () => {
+  const checkBox = dom.window.document.querySelector('.checkbox');
+
+  checkBox.click();
+
+  it('task completed should be true', () => {
+    expect(checkBox.checked).toBe(true);
+  });
+});
+
+describe('Clear Completed', () => {
+  const clearBtn = dom.window.document.querySelector('.clear-btn');
+
+  clearBtn.click();
+
+  it('task completed should be false', () => {
+    expect(checkBox.checked).toBe(false);
   });
 });
