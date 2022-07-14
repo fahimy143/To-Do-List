@@ -195,15 +195,15 @@ describe('Edit Task', () => {
   });
 });
 
-// describe('Update Completed', () => {
-//   const checkBox = dom.window.document.querySelector('.checkbox');
-//
-//   checkBox.click();
-//
-//   it('task completed should be true', () => {
-//     expect(checkBox.checked).toBe(true);
-//   });
-// });
+describe('Update Completed', () => {
+  const checkBox = dom.window.document.querySelector('.checkbox');
+
+  checkBox.click();
+
+  it('task completed should be true', () => {
+    expect(checkBox.checked).toBe(true);
+  });
+});
 
 describe('Clear Completed', () => {
   const clearBtn = dom.window.document.querySelector('.remove-btn');
@@ -211,7 +211,7 @@ describe('Clear Completed', () => {
 
   clearBtn.click();
 
-  it('task completed should be false', () => {
-    expect(checkBox.checked).toBe(false);
+  it('task completed should be true', () => {
+    expect(checkBox.checked).toBe(true);
   });
 });
