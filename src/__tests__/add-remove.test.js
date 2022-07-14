@@ -1,4 +1,3 @@
-/* eslint-disable */
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
@@ -71,7 +70,6 @@ function removeTask(iD) {
 function addTasktoList(task) {
   const taskCtn = dom.window.document.getElementById('task-list');
   const taskLi = dom.window.document.createElement('li');
-  // taskLi.setAttribute('id', task.taskId);
 
   taskCtn.appendChild(taskLi);
   taskLi.className = 'task';
@@ -153,6 +151,7 @@ function editTask(iD, newDesc) {
 }
 
 // a function for updating an item's 'completed' status.
+/* eslint-disable */
 function updateCompleted(iD, newStatus) {
   const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
 
