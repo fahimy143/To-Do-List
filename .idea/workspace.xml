@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="946d4c0e-d3e4-493b-906b-c01476f2f7b6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Bu6RC4wjGTHaDRxadXJsy9pXl0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/__tests__" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/__tests__" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/__tests__" />
+      <recent name="$PROJECT_DIR$/src/modules" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Add a new task to storage.check new length of array object">
+    <configuration name="Add a new task to storage.check new description of array object" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/add.test.js" />
+      <test-names>
+        <test-name value="Add a new task to storage" />
+        <test-name value="check new description of array object" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Add a new task to storage.check new index of array object" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/add.test.js" />
+      <test-names>
+        <test-name value="Add a new task to storage" />
+        <test-name value="check new index of array object" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Add a new task to storage.check new length of array object" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/add.test.js" />
+      <test-names>
+        <test-name value="Add a new task to storage" />
+        <test-name value="check new length of array object" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tasks (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/functionality.test.js" />
+      <test-names>
+        <test-name value="Tasks" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tasks.remove" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/functionality.test.js" />
+      <test-names>
+        <test-name value="Tasks" />
+        <test-name value="remove" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Wallaby" type="wallaby" factoryName="wallaby" configType="Automatic" configFolder="$PROJECT_DIR$" wsl="No" SmartStart="Yes">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Wallaby.js.Wallaby" />
+      <item itemvalue="Jest.Tasks (1)" />
+      <item itemvalue="Jest.Tasks.remove" />
+      <item itemvalue="Jest.Add a new task to storage.check new description of array object" />
+      <item itemvalue="Jest.Add a new task to storage.check new index of array object" />
+      <item itemvalue="Jest.Add a new task to storage.check new length of array object" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Add a new task to storage.check new length of array object" />
+        <item itemvalue="Jest.Add a new task to storage.check new description of array object" />
+        <item itemvalue="Jest.Add a new task to storage.check new index of array object" />
+        <item itemvalue="Jest.Tasks.remove" />
+        <item itemvalue="Jest.Tasks (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="946d4c0e-d3e4-493b-906b-c01476f2f7b6" name="Changes" comment="" />
+      <created>1657743615361</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657743615361</updated>
+      <workItem from="1657743618411" duration="822000" />
+      <workItem from="1657744581457" duration="18179000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

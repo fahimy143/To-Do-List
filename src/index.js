@@ -1,5 +1,5 @@
 import './style.css';
-import Tasks from './modules/functionality';
+import Tasks from './modules/functionality.js';
 import Status from './modules/status.js';
 
 const tasks = new Tasks();

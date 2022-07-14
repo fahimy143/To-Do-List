@@ -1,4 +1,5 @@
-const jsdom = require('jsdom');
+// eslint-disable-next-line
+const jsdom = require('./jsdom');
 
 const { JSDOM } = jsdom;
 
