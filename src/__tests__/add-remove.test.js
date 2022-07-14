@@ -99,42 +99,6 @@ function addTasktoList(task) {
   delTaskbtn.className = 'remove-btn';
 }
 
-// a function for editing the task description.
-function editTask(iD, newDesc) {
-  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
-
-  taskArr.forEach((task, index) => {
-    if (Number(task.taskId) === Number(iD)) {
-      taskArr[index].description = newDesc;
-    }
-  });
-  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
-}
-
-// a function for updating an item's 'completed' status.
-function updateCompleted(iD, newStatus) {
-  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
-
-  taskArr.forEach((task, index) => {
-    if (Number(task.taskId) === Number(iD)) {
-      taskArr[index].completed = newStatus;
-    }
-  });
-  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
-}
-
-// the "Clear all completed" function.
-function clearCompleted() {
-  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
-
-  taskArr.forEach((task, index) => {
-    if (task.completed) {
-      taskArr.splice(index, 1);
-    }
-  });
-  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
-}
-
 dom.window.document.getElementById('form-section').addEventListener('submit', (e) => {
   // Prevent submit
   e.preventDefault();
@@ -175,6 +139,45 @@ describe('Remove Task from Storage', () => {
 
 });
 
+// part2
+
+
+// a function for editing the task description.
+function editTask(iD, newDesc) {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (Number(task.taskId) === Number(iD)) {
+      taskArr[index].description = newDesc;
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
+// a function for updating an item's 'completed' status.
+function updateCompleted(iD, newStatus) {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (Number(task.taskId) === Number(iD)) {
+      taskArr[index].completed = newStatus;
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
+// the "Clear all completed" function.
+function clearCompleted() {
+  const taskArr = JSON.parse(localStorageMock.getItem('taskArr')) || [];
+
+  taskArr.forEach((task, index) => {
+    if (task.completed) {
+      taskArr.splice(index, 1);
+    }
+  });
+  localStorageMock.setItem('taskArr', JSON.stringify(taskArr));
+}
+
 describe('Edit Task', () => {
   const taskLi = dom.window.document.querySelector('#task-list');
   const taskDesc = dom.window.document.querySelector('.task-desc');
@@ -202,12 +205,13 @@ describe('Edit Task', () => {
 //   });
 // });
 
-// describe('Clear Completed', () => {
-//   const clearBtn = dom.window.document.querySelector('.clear-btn');
-//
-//   clearBtn.click();
-//
-//   it('task completed should be false', () => {
-//     expect(checkBox.checked).toBe(false);
-//   });
-// });
+describe('Clear Completed', () => {
+  const clearBtn = dom.window.document.querySelector('.remove-btn');
+  const checkBox = dom.window.document.querySelector('.checkbox');
+
+  clearBtn.click();
+
+  it('task completed should be false', () => {
+    expect(checkBox.checked).toBe(false);
+  });
+});
