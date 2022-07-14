@@ -73,12 +73,12 @@ export default class Tasks {
     this.displayTask();
   }
 
-  remove = (index) => {
-    this.tasksArray.splice(index, 1);
-    for (let i = 0; i < this.tasksArray.length; i += 1) {
-      this.tasksArray[i].index = i;
+  remove = (index, taskList) => {
+    taskList.splice(index, 1);
+    for (let i = 0; i < taskList.length; i += 1) {
+      taskList[i].index = i;
     }
-    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-    this.displayTask();
+    // localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    return taskList;
   }
 }
