@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+/* eslint-disable */
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
@@ -136,11 +136,9 @@ describe('Remove Task from Storage', () => {
   it('task Arr should be empty', () => {
     expect(taskArray).toStrictEqual([]);
   });
-
 });
 
 // part2
-
 
 // a function for editing the task description.
 function editTask(iD, newDesc) {
@@ -182,7 +180,7 @@ describe('Edit Task', () => {
   const taskLi = dom.window.document.querySelector('#task-list');
   const taskDesc = dom.window.document.querySelector('.task-desc');
   const editBtn = dom.window.document.querySelector('.edit-btn');
-  
+
   taskDesc.value = 'Task 1';
   editTask(taskLi.id, taskDesc.value);
 

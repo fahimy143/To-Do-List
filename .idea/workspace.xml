@@ -136,11 +136,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jest.Tasks (1)" />
-      <item itemvalue="Jest.Tasks.remove" />
       <item itemvalue="Jest.Add a new task to storage.check new description of array object" />
       <item itemvalue="Jest.Add a new task to storage.check new index of array object" />
       <item itemvalue="Jest.Add a new task to storage.check new length of array object" />
+      <item itemvalue="Jest.Tasks (1)" />
+      <item itemvalue="Jest.Tasks.remove" />
       <item itemvalue="Wallaby.js.Wallaby" />
     </list>
     <recent_temporary>
