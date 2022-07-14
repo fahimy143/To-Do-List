@@ -3,9 +3,9 @@ import Status from './status.js';
 const status = new Status();
 
 export default class Tasks {
-  // constructor() {
-  //   this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
-  // }
+  constructor() {
+    this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
+  }
 
     displayTask = () => {
       const todoContainer = document.querySelector('#todo-list');
@@ -51,20 +51,14 @@ export default class Tasks {
       status.completeTask(this.tasksArray);
     }
 
-  add = (value, taskList) => {
-    // this.tasksArray.push({
-    //   description: value,
-    //   isCompleted: false,
-    //   index: this.tasksArray.length,
-    // });
-    // localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-    // this.displayTask();
-    taskList.push({
+  add = (value) => {
+    this.tasksArray.push({
       description: value,
       isCompleted: false,
-      id: taskList.length,
+      index: this.tasksArray.length,
     });
-    return taskList;
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    this.displayTask();
   }
 
   update = (value, index) => {
@@ -73,12 +67,12 @@ export default class Tasks {
     this.displayTask();
   }
 
-  remove = (index, taskList) => {
-    taskList.splice(index, 1);
-    for (let i = 0; i < taskList.length; i += 1) {
-      taskList[i].index = i;
+  remove = (index) => {
+    this.tasksArray.splice(index, 1);
+    for (let i = 0; i < this.tasksArray.length; i += 1) {
+      this.tasksArray[i].index = i;
     }
-    // localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-    return taskList;
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    this.displayTask();
   }
 }
