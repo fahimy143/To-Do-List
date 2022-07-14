@@ -13,8 +13,6 @@ describe('Add a new task to storage',
     test('check new length of array object', () => {
       expect(taskList.length).toBe(5);
     });
-    // eslint-disable-next-line no-console
-    console.log(newDescription.description);
     test('check new description of array object', () => {
       expect(taskList[3].description).toBe('task 4');
     });

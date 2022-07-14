@@ -6,6 +6,7 @@ class LocalStorage {
       { id: 3, description: 'task 3', completed: false },
       { id: 4, description: 'task 4', completed: false },
     ];
+    console.log(this.store[0]);
   }
 
   getItems() {
