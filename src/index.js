@@ -1,6 +1,6 @@
 import './style.css';
-import Tasks from './functionality';
-import Status from './status.js';
+import Tasks from './modules/functionality';
+import Status from './modules/status.js';
 
 const tasks = new Tasks();
 const status = new Status();

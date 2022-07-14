@@ -3,9 +3,9 @@ import Status from './status.js';
 const status = new Status();
 
 export default class Tasks {
-  constructor() {
-    this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
-  }
+  // constructor() {
+  //   this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
+  // }
 
     displayTask = () => {
       const todoContainer = document.querySelector('#todo-list');
@@ -51,14 +51,20 @@ export default class Tasks {
       status.completeTask(this.tasksArray);
     }
 
-  add = (value) => {
-    this.tasksArray.push({
+  add = (value, taskList) => {
+    // this.tasksArray.push({
+    //   description: value,
+    //   isCompleted: false,
+    //   index: this.tasksArray.length,
+    // });
+    // localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    // this.displayTask();
+    taskList.push({
       description: value,
       isCompleted: false,
-      index: this.tasksArray.length,
+      id: taskList.length,
     });
-    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-    this.displayTask();
+    return taskList;
   }
 
   update = (value, index) => {
